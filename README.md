@@ -12,5 +12,5 @@ goes to local directory, all operations are performed in multi-threading.
 - Sqlite
 
 ### Project Screenshots:
-<img src="https://github.com/Kingpins/BusinessAR/blob/main/Project%20Screenshots/BusinessAR%20(1).png" width="250px"/> <img src="https://github.com/Kingpins/BusinessAR/blob/main/Project%20Screenshots/BusinessAR%20(3).png" width="250px"/> <img src="https://github.com/Kingpins/BusinessAR/blob/main/Project%20Screenshots/BusinessAR%20(5).png" width="250px"/>
+<img src="https://github.com/Kingpins/FileSearchEngine/blob/main/pics/Slide1.JPG" width="800px"/> <img src="https://github.com/Kingpins/FileSearchEngine/blob/main/pics/Slide2.JPG" width="800px"/> <img src="https://github.com/Kingpins/FileSearchEngine/blob/main/pics/Slide3.JPG" width="800px"/>
 
