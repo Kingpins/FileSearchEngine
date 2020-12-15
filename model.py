@@ -19,11 +19,19 @@ class SearchEngine:
 
     def create_new_index(self, values) -> None:
         ''' Create a new file index of the root; then save to self.file_index. '''
-        self.file_index.clear()
-        self.index_loaded = False
-        self.file_index: list = [(root, files) for root, dirs, files in os.walk(values) if files] 
-        self.index_loaded = True
-        print(values+" created")
+        try:
+            if values != "":
+                self.file_index.clear()
+                self.index_loaded = False
+                self.file_index: list = [(root, files) for root, dirs, files in os.walk(values) if files] 
+                self.index_loaded = True
+                print(values+" created")
+                return values + " created"
+            else:
+                return "provide valid directory"
+        except:
+            return "unable to create an index"
+        
 
     def create_directory_index(self, values) -> None:
         ''' Create a new file index of the root; then save to self.file_index and to pickle file '''
@@ -59,9 +67,10 @@ class SearchEngine:
         try:
             with open('file_index.pkl','rb') as f:
                 self.file_index = pickle.load(f)
+                self.index_loaded = True
         except:
             self.preload_completed = False
-        self.index_loaded = True
+        
 
 
     def search(self, value) -> None:
@@ -92,7 +101,7 @@ class SearchEngine:
                 }
             return to_return
 
-       
+        
         # search for matches and count results
         for path, files in self.file_index:
             for file in files:
